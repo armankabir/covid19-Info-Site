@@ -245,7 +245,7 @@ nav{
   background-image: url("https://netrinoimages.s3.eu-west-2.amazonaws.com/2020/03/27/700284/283575/coronavirus_sarscov2_red_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_2972683_o.png");
   background-size: contain;
   text-align: center;
-  margin-bottom: 0px;
+  margin-bottom: 0px !important;
 }
 
 nav a{
