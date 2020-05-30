@@ -218,7 +218,7 @@ div[class^="bubble-"]:after{
 }
 .options a:hover{
   color: gray;
-  font-size: 47px;
+  font-size: 40px;
 }
 .options a{
   padding-left: 100px;
