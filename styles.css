@@ -239,3 +239,19 @@ div[class^="bubble-"]:after{
 	-webkit-text-stroke: 1px #F8F8F8;
 	text-shadow: 0px 2px 4px blue;
 }
+
+/* nav bar */
+nav{
+  background-image: url("https://netrinoimages.s3.eu-west-2.amazonaws.com/2020/03/27/700284/283575/coronavirus_sarscov2_red_3d_model_c4d_max_obj_fbx_ma_lwo_3ds_3dm_stl_2972683_o.png");
+  background-size: contain;
+  text-align: center;
+  margin-bottom: 0px;
+}
+
+nav a{
+  color: wheat;
+  font-size: 14pt;
+  font-weight: bold;
+}
+
+
