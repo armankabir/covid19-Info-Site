@@ -200,9 +200,6 @@ div[class^="bubble-"]:after{
 /* Donations Page */
 
 .donations-body{
-  background-image: url("https://www.wwaytv3.com/wp-content/uploads/2020/03/MGN_1280x960_00311B00-MHUSC.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   color: white;
   
 }
@@ -216,6 +213,13 @@ div[class^="bubble-"]:after{
   cursor: pointer;
   color: gray;
 }
+.options{
+  background-image: url("https://www.wwaytv3.com/wp-content/uploads/2020/03/MGN_1280x960_00311B00-MHUSC.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width:100%;
+  height: 1000px;
+}
 .options a:hover{
   color: gray;
   font-size: 40px;
@@ -227,7 +231,6 @@ div[class^="bubble-"]:after{
     font-size: 40px;
     font-weight: 500;
     text-shadow: 2px 2px #ff0000;
-  
 }
 
 .donate-paragraph{
