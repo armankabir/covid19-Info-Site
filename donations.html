@@ -5,7 +5,6 @@
 
   <title>Covid19 Info Site</title>
   <meta name="description" content="Covid19 Info Site">
-  <meta name="author" content="Jing Wen">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="styles.css?v=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -30,7 +29,6 @@
     <div style="text-align: center;">
       <label>Choose a country to which you wish to donate to: </label>
         <select id="CountriesToDonate" onchange="CountrySelected(this);">
-          <option>Countries</option>
           <option value="1">United States</option>
           <option value="2">United Kingdom</option>
           <option value="3">Italy</option>
@@ -43,13 +41,13 @@
           <option value="10">Germany</option>
         </select>
         
-        <div id= "US" style="display: none;">
+        <div id= "US" style="display: block;">
           THE US
         </div>
 
         <div id = "UK" style="display: none;">
           
-            <a href="https://www.unicef.org.uk/donate/coronavirus/">Unicef UnitedKingdom</a>
+            <a href="https://www.unicef.org.uk/donate/coronavirus/">Unicef United Kingdom</a>
             <a href="https://nationalemergenciestrust.org.uk/">National Emergencies Trust</a>
           
         </div>
@@ -88,49 +86,16 @@
         </div>
 
     <script>
-      var element = document.getElementById("CountriesToDonate");
+       var element = document.getElementById("CountriesToDonate");
       element.onchange = function(){
         console.log(this.value);
-        if(this.value === '1'){
-          let hiddenDiv = document.getElementById("US");
-          hiddenDiv.style.display = (this.value == "") ? "none":"block";
-          }
-        else if (this.value === '2'){
-          let hiddenDiv = document.getElementById("UK");
-          hiddenDiv.style.display = (this.value == "") ? "none":"block";
-        }
-        else if (this.value === '3'){
-          let hiddenDiv = document.getElementById("Italy");
-          hiddenDiv.style.display = (this.value == "") ? "none":"block";
-        }
-        else if (this.value === '4'){
-          let hiddenDiv = document.getElementById("France");
-          hiddenDiv.style.display = (this.value == "") ? "none":"block";
-        }
-        else if (this.value === '5'){
-          let hiddenDiv = document.getElementById("Spain");
-          hiddenDiv.style.display = (this.value == "") ? "none":"block";
-        }
-        else if (this.value === '6'){
-          let hiddenDiv = document.getElementById("Brazil");
-          hiddenDiv.style.display = (this.value == "") ? "none":"block";
-        } 
-        else if (this.value === '7'){
-          let hiddenDiv = document.getElementById("Mexico");
-          hiddenDiv.style.display = (this.value == "") ? "none":"block";
-        }
-        else if (this.value === '8'){
-          let hiddenDiv = document.getElementById("Turkey");
-          hiddenDiv.style.display = (this.value == "") ? "none":"block";
-        }
-        else if (this.value === '9'){
-          let hiddenDiv = document.getElementById("Iran");
-          hiddenDiv.style.display = (this.value == "") ? "none":"block";
-        }
-        else if (this.value === '10'){
-          let hiddenDiv = document.getElementById("Germany");
-          hiddenDiv.style.display = (this.value == "") ? "none":"block";
-      }         
+        const countries = [
+          'US', 'UK', 'Italy', 'France', 'Spain', 'Brazil', 'Mexico', 'Turkey', 'Iran', 'Germany'
+        ]
+        for (let i = 0; i < countries.length; i++) {
+          let hiddenDiv = document.getElementById(countries[i]);
+          hiddenDiv.style.display = (this.value !== String(i + 1)) ? "none":"block";
+        }    
     };
     </script>
 </body>
