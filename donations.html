@@ -13,7 +13,7 @@
 
 </head>
 
-<body>
+<body class="donations-body">
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <nav class="navbar navbar-light">
@@ -24,26 +24,27 @@
         <li><a href="donations.html">Donations</a></li>
       </ul>
     </nav>
-    <h2>Help by donating to these coutries that have the most cases</h2>
-    <p style="font-size: medium;text-align: center;">Covid19 has had a traumatic affect on the world leading to countires closing their airports. Along with making cities and regions quaratine in order to help contain the spread while researchers rush to find a cure.
+    <div class= "options">
+      <h2 style="text-align: center; font-family: Verdana;">Help By Donating To These Countries That Have The Most Cases</h2>
+      <p class="donate-paragraph" style="font-size: medium;text-align: center;">Covid19 has had a traumatic affect on the world leading to countires closing their airports. Along with making cities and regions quaratine in order to help contain the spread while researchers rush to find a cure.
       Their places around the world that have suffered the most through this pandemic here are 10 countires to which you can find multiple sites in order to donate to help those in need. If you'd like to know more about Covid19 go to facts tab or if you'd like to know about other countries with high rates click on countries tab.
-      Below are countries with heightest deaths as of may 29, 2020 source: <a href="https://www.statista.com/statistics/1093256/novel-coronavirus-2019ncov-deaths-worldwide-by-country/">statista</a>.
-    </p>
+      Below are countries with heightest deaths as of may 29, 2020 source: <a style="font-size: medium;" href="https://www.statista.com/statistics/1093256/novel-coronavirus-2019ncov-deaths-worldwide-by-country/">statista</a>.
+      </p>
   
-    <div style="text-align: center;">
-      <label>Choose a country to which you wish to donate to: </label>
-        <select id="CountriesToDonate" onchange="CountrySelected(this);">
-          <option value="1">United States</option>
-          <option value="2">United Kingdom</option>
-          <option value="3">Italy</option>
-          <option value="4">France & Belgium</option>
-          <option value="5">Spain</option>
-          <option value="6">Brazil</option>
-          <option value="7">Mexico</option>
-          <option value="8">Turkey</option>
-          <option value="9">Iran</option>
-          <option value="10">Germany</option>
-        </select>
+      <div style="text-align: center; font-family: Verdana;">
+        <label style="font-size: medium;">Choose a country to which you wish to donate to: </label>
+          <select class="choose-country" style="font-size:medium " id="CountriesToDonate" onchange="CountrySelected(this);">
+            <option value="1">United States</option>
+            <option value="2">United Kingdom</option>
+            <option value="3">Italy</option>
+            <option value="4">France & Belgium</option>
+            <option value="5">Spain</option>
+            <option value="6">Brazil</option>
+            <option value="7">Mexico</option>
+            <option value="8">Turkey</option>
+            <option value="9">Iran</option>
+            <option value="10">Germany</option>
+          </select>
         
         <div id= "US" style="display: block;">
           <a href="https://www.salvationarmyusa.org/usn/covid19/">The Salvation Army</a>
@@ -70,8 +71,8 @@
         </div>
 
         <div id = "Spain" style="display: none;">
-          <a href="https://www.unitedway.org.es/donate/?lang=en">United Way Espana</a>
-          <a href="https://www.cruzroja.es/webCre/donativos/donativos.php?llamada=2.9.193.13860.24/05/04.2.13860">Redcross Spain</a>
+          <a href="https://www.unitedway.org.es/donate/?lang=en">United Way Espana </a>
+          <a href="https://www.cruzroja.es/webCre/donativos/donativos.php?llamada=2.9.193.13860.24/05/04.2.13860"> Redcross Spain</a>
         </div>
 
         <div id = "Brazil" style="display: none;">
@@ -98,9 +99,9 @@
           <a href="https://www.betterplace.org/en/discover-projects/55-donate-corona">Better Place</a>
           <a href="https://www.aktion-deutschland-hilft.de/de/hilfseinsaetze/corona-spenden-helfen/">Aktion Deutschland Hilft</a>
         </div>
-
+      </div>
     <script>
-       var element = document.getElementById("CountriesToDonate");
+      var element = document.getElementById("CountriesToDonate");
       element.onchange = function(){//function decides which div to reveal based off select option the user picks 
         console.log(this.value);
         const countries = [
@@ -110,7 +111,7 @@
           let hiddenDiv = document.getElementById(countries[i]);
           hiddenDiv.style.display = (this.value !== String(i + 1)) ? "none":"block";
         }    
-    };
+      };
     </script>
 </body>
 </html>
