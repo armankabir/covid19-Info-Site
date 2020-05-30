@@ -29,19 +29,109 @@
   
     <div style="text-align: center;">
       <label>Choose a country to which you wish to donate to: </label>
-        <select id="CountriesToDonate">
-          <option value="US">United States</option>
-          <option value="UK">United Kingdom</option>
-          <option value="Italy">Italy</option>
-          <option value="France">France</option>
-          <option value="Spain">Spain</option>
-          <option value="Brazil">Brazil</option>
-          <option value="Mexico">Mexico</option>
-          <option value="Turkey">Turkey</option>
-          <option value="Iran">Iran</option>
-          <option value="Germany">Germany</option>
+        <select id="CountriesToDonate" onchange="CountrySelected(this);">
+          <option>Countries</option>
+          <option value="1">United States</option>
+          <option value="2">United Kingdom</option>
+          <option value="3">Italy</option>
+          <option value="4">France</option>
+          <option value="5">Spain</option>
+          <option value="6">Brazil</option>
+          <option value="7">Mexico</option>
+          <option value="8">Turkey</option>
+          <option value="9">Iran</option>
+          <option value="10">Germany</option>
         </select>
-    </div>
+        
+        <div id= "US" style="display: none;">
+          THE US
+        </div>
 
+        <div id = "UK" style="display: none;">
+          
+            <a href="https://www.unicef.org.uk/donate/coronavirus/">Unicef UnitedKingdom</a>
+            <a href="https://nationalemergenciestrust.org.uk/">National Emergencies Trust</a>
+          
+        </div>
+
+        <div id= "Italy" style="display: none;">
+            <a href="https://www.cri.it/emergenza-coronavirus">Italian Redcross</a>
+            <a href="https://donazioni.unicef.it/landing-emergenze/emergenza-coronavirus#/home">Unicef Italy</a>
+        </div>
+
+        <div id = "France" style="display: none;">
+          baguette
+        </div>
+
+        <div id = "Spain" style="display: none;">
+          Barca
+        </div>
+
+        <div id = "Brazil" style="display: none;">
+          laura
+        </div>
+
+        <div id = "Mexico" style="display: none;">
+          Tamales
+        </div>
+
+        <div id = "Turkey" style="display: none;">
+          efe
+        </div>
+
+        <div id = "Iran" style="display: none;">
+          Rainin
+        </div>
+
+        <div id = "Germany" style="display: none;">
+          Dortmound
+        </div>
+
+    <script>
+      var element = document.getElementById("CountriesToDonate");
+      element.onchange = function(){
+        console.log(this.value);
+        if(this.value === '1'){
+          let hiddenDiv = document.getElementById("US");
+          hiddenDiv.style.display = (this.value == "") ? "none":"block";
+          }
+        else if (this.value === '2'){
+          let hiddenDiv = document.getElementById("UK");
+          hiddenDiv.style.display = (this.value == "") ? "none":"block";
+        }
+        else if (this.value === '3'){
+          let hiddenDiv = document.getElementById("Italy");
+          hiddenDiv.style.display = (this.value == "") ? "none":"block";
+        }
+        else if (this.value === '4'){
+          let hiddenDiv = document.getElementById("France");
+          hiddenDiv.style.display = (this.value == "") ? "none":"block";
+        }
+        else if (this.value === '5'){
+          let hiddenDiv = document.getElementById("Spain");
+          hiddenDiv.style.display = (this.value == "") ? "none":"block";
+        }
+        else if (this.value === '6'){
+          let hiddenDiv = document.getElementById("Brazil");
+          hiddenDiv.style.display = (this.value == "") ? "none":"block";
+        } 
+        else if (this.value === '7'){
+          let hiddenDiv = document.getElementById("Mexico");
+          hiddenDiv.style.display = (this.value == "") ? "none":"block";
+        }
+        else if (this.value === '8'){
+          let hiddenDiv = document.getElementById("Turkey");
+          hiddenDiv.style.display = (this.value == "") ? "none":"block";
+        }
+        else if (this.value === '9'){
+          let hiddenDiv = document.getElementById("Iran");
+          hiddenDiv.style.display = (this.value == "") ? "none":"block";
+        }
+        else if (this.value === '10'){
+          let hiddenDiv = document.getElementById("Germany");
+          hiddenDiv.style.display = (this.value == "") ? "none":"block";
+      }         
+    };
+    </script>
 </body>
 </html>
