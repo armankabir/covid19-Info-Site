@@ -1,6 +1,15 @@
 
 /* This is adding the virus bubbles animation style onto the homepage */
+.navbar-nav li a {
+color:white;}
 
+.navbar {
+    position: fixed !important;
+    width: 100%;
+    background: none;
+    top: 10px;
+    z-index: 999;
+}
 * {padding:0; margin:0;}
 .virus-container {
   width:100%;
