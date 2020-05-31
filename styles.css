@@ -210,6 +210,9 @@ div[class^="bubble-"]:after{
 
 .donations-body{
   color: white;
+  background-image: url("https://www.wwaytv3.com/wp-content/uploads/2020/03/MGN_1280x960_00311B00-MHUSC.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
   
 }
 .choose-country{
@@ -223,9 +226,6 @@ div[class^="bubble-"]:after{
   color: gray;
 }
 .options{
-  background-image: url("https://www.wwaytv3.com/wp-content/uploads/2020/03/MGN_1280x960_00311B00-MHUSC.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
   width:100%;
   height: 1000px;
 }
